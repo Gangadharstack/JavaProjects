@@ -1,0 +1,54 @@
+public class Box {
+
+	private double width;
+	private double height;
+	private double depth;
+	
+	//Implementing the getter and setter method
+	public double getWidth() {
+		return width;
+	}
+	public void setWidth(double width) {
+		this.width = (width>0)? width:1;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public void setHeight(double height) {
+		this.height = (height>0)? height:1;
+	}
+	public double getDepth() {
+		return depth;
+	}
+	public void setDepth(double depth) {
+		this.depth = (depth>0)? depth:1;
+	}		
+	//implementing	object manulation method
+		public double volume(){
+			return width*height*depth;
+
+	}
+}
+
+
+public class Boxmain {
+	
+	public static void main(String...arg) {
+		Box boxObj=new Box();
+		
+		boxObj.setWidth(10);
+		boxObj.setHeight(15);
+		boxObj.setDepth(20);
+		
+		double volume;
+		
+		System.out.println("Width value is:"+boxObj.getWidth());
+		System.out.println("Height value is:"+boxObj.getHeight());
+		System.out.println("Depth value is:"+boxObj.getDepth());
+		
+		volume= boxObj.volume();
+		System.out.println("The volume of box is:"+volume);
+		
+	}
+
+}

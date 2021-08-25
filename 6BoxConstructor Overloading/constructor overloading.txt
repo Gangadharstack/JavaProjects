@@ -1,0 +1,51 @@
+
+public class Box 
+{
+	double width;
+	double height;
+	double depth;
+	
+	//Default constructor
+	public Box()
+	{
+		width=10;
+		height=15;
+		depth=20;		
+	}
+	//Single Parameterized constructor
+	public Box(double val)
+	{
+		width=height=depth=val;
+	}
+	//Three parameterized constuctor
+	public Box(double w,double h,double d)
+	{
+		width=(w>0)?w:1;
+		height=(h>0)?h:1;
+		depth=(d>0)?d:1;
+	}
+	public double volume()
+	{
+		return width*height*depth;
+	}
+
+}
+
+public class Boxmain 
+{
+	public static void main(String arg[])
+	{
+		Box defaultBox=new Box();
+		Box squareBox=new Box(10);
+		Box userDefinedBox=new Box(11,12,13);
+		
+		System.out.println("The default Box volume:"+defaultBox.volume());
+		System.out.println("The square Box volume:"+squareBox.volume());
+		System.out.println("The user Defined Box volume:"+userDefinedBox.volume());
+	}
+}
+output:
+=======
+The default Box volume:3000.0
+The square Box volume:1000.0
+The user Defined Box volume:1716.0
